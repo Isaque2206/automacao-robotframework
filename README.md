@@ -32,3 +32,5 @@ robot -d logs tests/
 ## CI/CD com GitHub Actions
 
 Os testes são executados automaticamente no GitHub Actions a cada push.
+
+<!-- Teste CI -->
