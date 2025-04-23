@@ -1,4 +1,5 @@
 # Projeto de Automação com Robot Framework
+![CI](https://github.com/Isaque2206/automacao-robotframework/actions/workflows/robot-ci.yml/badge.svg)
 
 Este projeto realiza testes automatizados E2E (fim a fim) utilizando o Robot Framework.
 
