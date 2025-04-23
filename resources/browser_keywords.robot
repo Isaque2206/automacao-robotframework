@@ -7,8 +7,9 @@ ${BROWSER}    chrome
 
 *** Keywords ***
 Abrir navegador
-    Open Browser    ${URL}    ${BROWSER}
-    Maximize Browser Window
+   Create WebDriver    Chrome    options=add_argument("--headless=new")    options=add_argument("--no-sandbox")    options=add_argument("--disable-dev-shm-usage")
+   Go To    ${URL}
+   Maximize Browser Window
 
 Tirar evidência final
     Capture Page Screenshot    
