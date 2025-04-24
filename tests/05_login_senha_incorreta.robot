@@ -1,6 +1,5 @@
 *** Settings ***
 Library     SeleniumLibrary
-Library    Browser
 Resource    ../resources/browser_keywords.robot
 Resource    ../resources/login_keywords.robot
 

@@ -1,6 +1,5 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    Browser
 
 *** Keywords ***
 Clicar em Sign In

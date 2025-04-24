@@ -1,177 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.11.3 on win32)" generated="2025-04-24T15:32:40.740975" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.11.3 on win32)" generated="2025-04-24T16:13:34.201568" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\Users\LENOVO\Downloads\projeto_robotframework_fcamara\tests">
 <suite id="s1-s1" name="04 Account Validar Campos Obrigatorios" source="C:\Users\LENOVO\Downloads\projeto_robotframework_fcamara\tests\04_account_validar_campos_obrigatorios.robot">
 <test id="s1-s1-t1" name="Validar campos obrigatórios na criação de conta" line="8">
 <kw name="Abrir navegador" owner="browser_keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-24T15:32:41.329726" level="INFO">Opening browser 'chrome' to base url 'http://www.automationpractice.pl/index.php'.</msg>
+<msg time="2025-04-24T16:13:34.573155" level="FAIL">Variable '${RANDOM}' not found.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
+<arg>options=add_argument(--no-sandbox);add_argument(--disable-dev-shm-usage);add_argument(--disable-gpu);add_argument(--headless);add_argument(--user-data-dir=/tmp/profile_${RANDOM})</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-24T15:32:41.329726" elapsed="7.417046"/>
+<status status="FAIL" start="2025-04-24T16:13:34.572102" elapsed="0.001053">Variable '${RANDOM}' not found.</status>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-24T15:32:48.748733" elapsed="0.093505"/>
+<status status="NOT RUN" start="2025-04-24T16:13:34.573155" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-04-24T15:32:41.328415" elapsed="7.513823"/>
+<status status="FAIL" start="2025-04-24T16:13:34.571057" elapsed="0.002098">Variable '${RANDOM}' not found.</status>
 </kw>
 <kw name="Clicar em Sign In" owner="email_validation_keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-24T15:32:48.845746" level="INFO">Clicking element 'xpath=//a[@class='login']'.</msg>
-<arg>xpath=//a[@class='login']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-24T15:32:48.844745" elapsed="1.409558"/>
-</kw>
-<status status="PASS" start="2025-04-24T15:32:48.842238" elapsed="1.412065"/>
+<status status="NOT RUN" start="2025-04-24T16:13:34.574155" elapsed="0.000000"/>
 </kw>
 <kw name="Preencher e-mail válido" owner="email_validation_keywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-24T15:32:50.257588" level="INFO">Typing text 'wikoge3818@f5url.com' into text field 'id=email_create'.</msg>
-<arg>id=email_create</arg>
-<arg>wikoge3818@f5url.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-24T15:32:50.257588" elapsed="0.216759"/>
-</kw>
-<status status="PASS" start="2025-04-24T15:32:50.256523" elapsed="0.217824"/>
+<status status="NOT RUN" start="2025-04-24T16:13:34.574155" elapsed="0.000000"/>
 </kw>
 <kw name="Clicar no botão Create an Account" owner="email_validation_keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=SubmitCreate</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-24T15:32:50.475698" elapsed="0.026408"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-24T15:32:50.503344" level="INFO">Clicking button 'id=SubmitCreate'.</msg>
-<arg>id=SubmitCreate</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-24T15:32:50.502106" elapsed="0.151153"/>
-</kw>
-<status status="PASS" start="2025-04-24T15:32:50.474347" elapsed="0.178912"/>
+<status status="NOT RUN" start="2025-04-24T16:13:34.574155" elapsed="0.000000"/>
 </kw>
 <kw name="Limpar campo de e-mail na tela de cadastro" owner="email_validation_keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-24T15:32:50.655367" level="INFO">Clicking button 'id=SubmitCreate'.</msg>
-<arg>id=SubmitCreate</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-24T15:32:50.655367" elapsed="0.096471"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=customer_firstname</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-24T15:32:50.751838" elapsed="1.078660"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-24T15:32:51.832006" level="INFO">Clicking element 'id=id_gender2'.</msg>
-<arg>id=id_gender2</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-24T15:32:51.832006" elapsed="0.098365"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-24T15:32:51.930371" level="INFO">Typing text 'wikoge3818@f5url.com' into text field 'id=email'.</msg>
-<arg>id=email</arg>
-<arg>wikoge3818@f5url.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-24T15:32:51.930371" elapsed="0.184861"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>id=email</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-24T15:32:52.115232" elapsed="0.048189"/>
-</kw>
-<status status="PASS" start="2025-04-24T15:32:50.654310" elapsed="1.509111"/>
+<status status="NOT RUN" start="2025-04-24T16:13:34.575318" elapsed="0.000000"/>
 </kw>
 <kw name="Clicar em Register" owner="email_validation_keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=submitAccount</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-24T15:32:52.164467" elapsed="0.030447"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-24T15:32:52.195930" level="INFO">Clicking button 'id=submitAccount'.</msg>
-<arg>id=submitAccount</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-24T15:32:52.194914" elapsed="0.752445"/>
-</kw>
-<status status="PASS" start="2025-04-24T15:32:52.163421" elapsed="0.783938"/>
+<status status="NOT RUN" start="2025-04-24T16:13:34.575318" elapsed="0.000000"/>
 </kw>
 <kw name="Validar mensagens de campos obrigatórios" owner="email_validation_keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>css=.alert.alert-danger</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-24T15:32:52.949381" elapsed="0.037366"/>
-</kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-04-24T15:32:53.015620" level="INFO">Element 'css=.alert.alert-danger' contains text 'lastname is required.'.</msg>
-<arg>css=.alert.alert-danger</arg>
-<arg>lastname is required.</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-04-24T15:32:52.986747" elapsed="0.028873"/>
-</kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-04-24T15:32:53.034429" level="INFO">Element 'css=.alert.alert-danger' contains text 'firstname is required.'.</msg>
-<arg>css=.alert.alert-danger</arg>
-<arg>firstname is required.</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-04-24T15:32:53.015620" elapsed="0.018809"/>
-</kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-04-24T15:32:53.053150" level="INFO">Element 'css=.alert.alert-danger' contains text 'email is required.'.</msg>
-<arg>css=.alert.alert-danger</arg>
-<arg>email is required.</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-04-24T15:32:53.034429" elapsed="0.018721"/>
-</kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-04-24T15:32:53.073265" level="INFO">Element 'css=.alert.alert-danger' contains text 'passwd is required.'.</msg>
-<arg>css=.alert.alert-danger</arg>
-<arg>passwd is required.</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-04-24T15:32:53.053150" elapsed="0.020115"/>
-</kw>
-<status status="PASS" start="2025-04-24T15:32:52.948372" elapsed="0.124893"/>
+<status status="NOT RUN" start="2025-04-24T16:13:34.575318" elapsed="0.000000"/>
 </kw>
 <kw name="Tirar evidência final" owner="browser_keywords">
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-04-24T15:32:53.235537" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-04-24T15:32:53.074378" elapsed="0.161159"/>
-</kw>
-<status status="PASS" start="2025-04-24T15:32:53.074378" elapsed="0.162478"/>
+<status status="NOT RUN" start="2025-04-24T16:13:34.575318" elapsed="0.000000"/>
 </kw>
 <kw name="Fechar navegador" owner="browser_keywords">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-24T15:32:53.238118" elapsed="2.317996"/>
+<status status="NOT RUN" start="2025-04-24T16:13:34.576634" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-04-24T15:32:53.236856" elapsed="2.319258"/>
-</kw>
-<msg time="2025-04-24T15:32:55.601319" level="INFO">Starting Browser process C:\Python311\Lib\site-packages\Browser\wrapper\index.js using port 63276</msg>
-<msg time="2025-04-24T15:32:55.601319" level="INFO">Node startup parameters: ['node', 'C:\\Python311\\Lib\\site-packages\\Browser\\wrapper\\index.js', '63276']</msg>
 <tag>validar_campos_obrigatorios</tag>
-<status status="PASS" start="2025-04-24T15:32:41.328415" elapsed="14.230139"/>
+<status status="FAIL" start="2025-04-24T16:13:34.571057" elapsed="0.005577">Variable '${RANDOM}' not found.</status>
 </test>
-<status status="PASS" start="2025-04-24T15:32:40.770079" elapsed="15.943480"/>
+<status status="FAIL" start="2025-04-24T16:13:34.230671" elapsed="0.346966"/>
 </suite>
-<status status="PASS" start="2025-04-24T15:32:40.742512" elapsed="16.027948"/>
+<status status="FAIL" start="2025-04-24T16:13:34.202574" elapsed="0.377211"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">validar_campos_obrigatorios</stat>
+<stat pass="0" fail="1" skip="0">validar_campos_obrigatorios</stat>
 </tag>
 <suite>
-<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
-<stat name="04 Account Validar Campos Obrigatorios" id="s1-s1" pass="1" fail="0" skip="0">Tests.04 Account Validar Campos Obrigatorios</stat>
+<stat name="Tests" id="s1" pass="0" fail="1" skip="0">Tests</stat>
+<stat name="04 Account Validar Campos Obrigatorios" id="s1-s1" pass="0" fail="1" skip="0">Tests.04 Account Validar Campos Obrigatorios</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-04-24T16:13:34.569032" level="ERROR">Error in file 'C:\Users\LENOVO\Downloads\projeto_robotframework_fcamara\resources\browser_keywords.robot' on line 10: Setting variable '${RANDOM}' failed: Recursive variable definition.</msg>
 </errors>
 </robot>
