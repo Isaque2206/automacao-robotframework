@@ -1,76 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.11.3 on win32)" generated="2025-04-23T21:26:26.644988" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.11.3 on win32)" generated="2025-04-23T21:37:51.311270" rpa="false" schemaversion="5">
 <suite id="s1" name="02 Login" source="C:\Users\LENOVO\Downloads\projeto_robotframework_fcamara\tests\02_login.robot">
 <test id="s1-t1" name="Fazer login com sucesso" line="11">
 <kw name="Abrir navegador" owner="browser_keywords" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-23T21:26:27.471957" level="INFO">Opening browser 'chrome' to base url 'http://www.automationpractice.pl/index.php'.</msg>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-23T21:37:52.114096" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001DBE237B750&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-23T21:37:52.114096" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-04-23T21:37:52.115134" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-04-23T21:37:52.115134" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-04-23T21:37:52.115134" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-04-23T21:37:52.115134" elapsed="0.001037"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2025-04-23T21:37:52.116171" level="FAIL">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</msg>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--window-size=1920,1080</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="FAIL" start="2025-04-23T21:37:52.116171" elapsed="0.000000">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</status>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" start="2025-04-23T21:37:52.116171" elapsed="0.000000"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
 <arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-23T21:26:27.470960" elapsed="19.093224"/>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-04-23T21:37:52.117207" elapsed="0.000000"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-23T21:26:46.565183" elapsed="0.077192"/>
-</kw>
-<status status="PASS" start="2025-04-23T21:26:27.469960" elapsed="19.173403"/>
-</kw>
-<kw name="Fazer login" owner="login_keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-23T21:26:46.645422" level="INFO">Clicking element 'xpath=//a[@class='login']'.</msg>
-<arg>xpath=//a[@class='login']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-23T21:26:46.644382" elapsed="1.511928"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-23T21:26:48.157547" level="INFO">Typing text 'teste@example.com' into text field 'id=email'.</msg>
-<arg>id=email</arg>
-<arg>${EMAIL}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-23T21:26:48.157547" elapsed="0.193085"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-23T21:26:48.351981" level="INFO">Typing text '654321' into text field 'id=passwd'.</msg>
-<arg>id=passwd</arg>
-<arg>${SENHA}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-23T21:26:48.350632" elapsed="0.150636"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-23T21:26:48.502556" level="INFO">Clicking button 'id=SubmitLogin'.</msg>
-<arg>id=SubmitLogin</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-23T21:26:48.502556" elapsed="1.258993"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>xpath=//a[@class='logout']</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-04-23T21:26:49.762979" elapsed="0.028779"/>
-</kw>
-<status status="PASS" start="2025-04-23T21:26:46.644382" elapsed="3.147376"/>
+<status status="FAIL" start="2025-04-23T21:37:52.113056" elapsed="0.004151">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</status>
 </kw>
 <kw name="Tirar evidência final" owner="browser_keywords" type="TEARDOWN">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-04-23T21:26:50.020284" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-118.png"&gt;&lt;img src="selenium-screenshot-118.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-23T21:37:52.117207" level="INFO">Cannot capture screenshot because no browser is open.</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-04-23T21:26:49.792776" elapsed="0.227508"/>
+<status status="PASS" start="2025-04-23T21:37:52.117207" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-04-23T21:26:49.791758" elapsed="0.228526"/>
+<status status="PASS" start="2025-04-23T21:37:52.117207" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-04-23T21:26:27.469349" elapsed="22.550935"/>
+<status status="FAIL" start="2025-04-23T21:37:52.111951" elapsed="0.005256">Setup failed:
+Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</status>
 </test>
-<status status="PASS" start="2025-04-23T21:26:26.645985" elapsed="23.375393"/>
+<status status="FAIL" start="2025-04-23T21:37:51.312318" elapsed="0.807243"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="02 Login" id="s1" pass="1" fail="0" skip="0">02 Login</stat>
+<stat name="02 Login" id="s1" pass="0" fail="1" skip="0">02 Login</stat>
 </suite>
 </statistics>
 <errors>
