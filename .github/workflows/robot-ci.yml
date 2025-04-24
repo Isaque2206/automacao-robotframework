@@ -30,10 +30,5 @@ jobs:
           sudo chmod +x /usr/local/bin/chromedriver
           sudo apt install -y google-chrome-stable
       
-      - name: Instalar dependências
-        run: |
-            pip install -r requirements.txt
-            rfbrowser init  # Necessário para baixar o navegador do BrowserLibrary
-        
       - name: Executar testes Robot
         run: robot -d logs tests/
