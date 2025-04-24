@@ -3,12 +3,18 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${URL}    http://www.automationpractice.pl/index.php
-${BROWSER}    chrome
 
 *** Keywords ***
 Abrir navegador
-    Open Browser    ${URL}    ${BROWSER}
-    Maximize Browser Window
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
+    Call Method    ${options}    add_argument    --headless
+    Call Method    ${options}    add_argument    --no-sandbox
+    Call Method    ${options}    add_argument    --disable-dev-shm-usage
+    Call Method    ${options}    add_argument    --disable-gpu
+    Call Method    ${options}    add_argument    --window-size=1920,1080
+    Create WebDriver    Chrome    options=${options}
+    Go To    ${URL}
+
 
 Tirar evidência final
     Capture Page Screenshot    
