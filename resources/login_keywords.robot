@@ -25,6 +25,15 @@ Preencher login com credenciais válidas
     Input Text    id=passwd   ${senha}
     Click Element    id=SubmitLogin
 
+# Validar login com senha incorreta 
+Validar login com senha inválida
+    Click Element    css=a.login
+    Input Text    id=email    qa@hotmail.com
+    Input Text    id=passwd   x
+    Click Button  id=SubmitLogin
+    Wait Until Element Is Visible    css=.alert.alert-danger    timeout=10s
+    Element Should Contain           css=.alert.alert-danger    Invalid password.
+
 Verificar login com sucesso
     Wait Until Page Contains Element    xpath=//a[@class='logout']
 

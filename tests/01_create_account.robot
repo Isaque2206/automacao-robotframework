@@ -9,6 +9,7 @@ Test Teardown     browser_keywords.Tirar evidência final
 
 *** Test Cases ***
 Criar conta com sucesso
+    [tags]    create_account
     Acessar página de criação de conta
     Preencher dados do usuário
     Submeter formulário

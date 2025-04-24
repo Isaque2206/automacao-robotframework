@@ -28,6 +28,15 @@ Executar todos os testes com:
 ```bash
 robot -d logs tests/
 ```
+## Casos de Teste Automatizados
+
+- [x] Criação de conta com dados válidos
+- [x] Validação de e-mail inválido
+- [x] Validação de campos obrigatórios
+- [x] Login com sucesso
+- [x] Login com senha incorreta
+- [x] Fluxo completo de compra
+
 
 ## CI/CD com GitHub Actions
 

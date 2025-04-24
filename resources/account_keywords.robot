@@ -31,6 +31,14 @@ Verificar criação com sucesso
     Wait Until Element Is Visible       css=.alert.alert-success      10s
     Element Text Should Be              css=.alert.alert-success      Your account has been created.
 
+Validar mensagem de e-mail inválido
+    [Arguments]    ${email_invalido}
+    Click Element    xpath=//a[@class='login']
+    Input Text    id=email_create    ${email_invalido}
+    Click Element    id=SubmitCreate
+    Wait Until Element Is Visible    xpath=//div[@id="create_account_error"]//li    10s
+    Element Text Should Be    xpath=//div[@id="create_account_error"]//li    Invalid email address.
+
 Tirar evidência final
     Capture Page Screenshot
 Fechar navegador

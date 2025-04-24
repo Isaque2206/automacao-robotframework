@@ -1,9 +1,11 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    Screenshot
 Resource   ../pages/home_page.robot
 
 *** Test Cases ***
 Realizar compra completa :: Teste E2E para realizar uma compra com sucesso
+    [Tags]    compra
     Abrir site
     Fazer login com usuário existente
     Acessar seção Women

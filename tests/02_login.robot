@@ -9,6 +9,7 @@ Test Teardown     browser_keywords.Tirar evidência final
 
 *** Test Cases ***
 Fazer login com sucesso
+    [Tags]    login 
     Fazer login
 
 
